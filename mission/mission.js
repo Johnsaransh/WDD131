@@ -11,7 +11,7 @@ function changeTheme() {
         document.querySelector('.logo').src = "byui-logo_white.png"; 
     } else {
         document.body.classList.remove('dark');
-        document.querySelector('byui.logo').src = "byui-logo_blue.webp"; 
+        document.querySelector('.logo').src = "byui-logo_blue.webp"; 
     }
 }
 
