@@ -38,19 +38,25 @@ header h1 {
   margin: 0;
 }
 
-nav button {
+nav {
+  position: relative;
+}
+
+nav .menu-button {
   background: none;
   border: none;
   font-size: 1.2em;
   color: var(--text-light);
   cursor: pointer;
-  position: absolute;
-  right: 10px;
-  top: 10px;
 }
 
-nav button:hover {
-  color: var(--accent-color);
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul.hide {
+  display: none;
 }
 
 main {
@@ -95,6 +101,37 @@ img {
   height: auto;
 }
 
+.viewer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: grid;
+  place-items: center;
+  z-index: 10;
+}
+
+.viewer img {
+  max-height: 100%;
+  border-radius: 5px;
+}
+
+.viewer button.close-viewer {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  color: white;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
 
 @media screen and (min-width: 700px) {
   .gallery {
@@ -102,18 +139,17 @@ img {
   }
 }
 
-
 @media screen and (min-width: 1000px) {
   .gallery {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  nav button {
-    display: none;
-  }
-
-  nav {
+  nav ul {
     display: flex;
     justify-content: center;
+  }
+
+  nav .menu-button {
+    display: none;
   }
 }
