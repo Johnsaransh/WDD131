@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participant Registration</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <div class="testbox">
+        <form id="registrationForm">
+            <h1>Event Registration</h1>
+            <fieldset class="participants">
+                <section class="participant1">
+                    <p>Participant 1</p>
+                    <div class="item">
+                        <label for="fname1">First Name<span>*</span></label>
+                        <input id="fname1" type="text" name="fname" required>
+                    </div>
+                    <div class="item activities">
+                        <label for="activity1">Activity #<span>*</span></label>
+                        <input id="activity1" type="text" name="activity" required>
+                    </div>
+                    <div class="item">
+                        <label for="fee1">Fee ($)<span>*</span></label>
+                        <input id="fee1" type="number" name="fee" required>
+                    </div>
+                    <div class="item">
+                        <label for="date1">Desired Date<span>*</span></label>
+                        <input id="date1" type="date" name="date" required>
+                    </div>
+                    <div class="item">
+                        <p>Grade</p>
+                        <select id="grade1" name="grade" required>
+                            <option selected disabled value="">Choose grade</option>
+                            <option value="1">1st</option>
+                            <option value="2">2nd</option>
+                        </select>
+                    </div>
+                </section>
+                <button type="button" id="add">Add Participant</button>
+            </fieldset>
+            <div class="btn-block">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+        <div id="summary" class="hide"></div>
+    </div>
+    <script src="register.js"></script>
+</body>
+</html>
