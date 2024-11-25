@@ -43,6 +43,38 @@ export const recipes = [
         ],
         instructions: "Toast the bread. Mash avocado and spread on toast. Add salt, pepper, and chili flakes if desired.",
         image: "images/avocado-toast.jpg"
+    },
+    {
+        id: 4,
+        title: "Chocolate Chip Cookies",
+        description: "Chewy and rich, a timeless classic.",
+        ingredients: [
+            "2 1/4 cups all-purpose flour",
+            "1 tsp baking soda",
+            "1 tsp salt",
+            "1 cup butter, softened",
+            "3/4 cup granulated sugar",
+            "3/4 cup brown sugar",
+            "1 tsp vanilla extract",
+            "2 large eggs",
+            "2 cups chocolate chips"
+        ],
+        instructions: "Preheat oven to 375°F. Mix dry ingredients. Cream butter, sugars, and vanilla. Add eggs. Gradually combine with dry ingredients. Stir in chocolate chips. Drop onto baking sheet and bake for 9-11 minutes.",
+        image: "images/cookies.jpg"
+    },
+    {
+        id: 5,
+        title: "Caesar Salad",
+        description: "Crisp romaine lettuce with a classic Caesar dressing.",
+        ingredients: [
+            "1 head romaine lettuce",
+            "1/2 cup croutons",
+            "1/4 cup grated Parmesan cheese",
+            "3 tbsp Caesar dressing",
+            "Optional: grilled chicken or shrimp"
+        ],
+        instructions: "Chop lettuce. Toss with croutons, cheese, and dressing. Add optional protein if desired.",
+        image: "images/caesar-salad.jpg"
     }
 ];
 

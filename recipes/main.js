@@ -31,3 +31,4 @@ window.addEventListener('DOMContentLoaded', () => {
         recipesContainer.appendChild(recipeCard);
     });
 });
+
