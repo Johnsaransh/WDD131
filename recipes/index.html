@@ -19,19 +19,39 @@
     </header>
     <main>
         <form class="search-form">
-            <input type="text" placeholder="Search recipes..." aria-label="Search recipes">
-            <button type="submit">Search</button>
+            <input type="text" class="search-input" placeholder="Search recipes..." aria-label="Search recipes">
+            <button type="submit" class="search-button">
+                <img src="images/search.svg" alt="search icon"> 
+            </button>
         </form>
         <section class="recipes">
-        
+
+            <img src="images/apple-crisp.jpg" alt="apple-crisp">
+            <div class="recipe-content">
+                <span class="tag">dessert</span>
+                <h2>Apple Crisp</h2>
+                <span
+                    class="rating"
+                    role="img"
+                    aria-label="Rating: 4 out of 5 stars"
+                >
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star-empty">⭐</span>
+                    <span aria-hidden="true" class="icon-star-empty">☆</span>
+                </span>
+                <p>This apple crisp recipe is a simple yet delicious fall dessert that's 
+                    great served warm with vanilla ice cream.</p>
+            </div>
         </section>
     </main>
     <footer>
         <p><small>Recipe icons created by <a href="https://www.flaticon.com/free-icons/Recipe" title="recipe icons">Freepik - Flaticon</a></small></p>
         <div class="social">
-            <a href="#"><img src="images/instagram_icon.svg" alt="Instagram icon"></a>
-            <a href="#"><img src="images/youtube_icon.svg" alt="YouTube icon"></a>
-            <a href="#"><img src="images/pinterest_icon.svg" alt="Pinterest icon"></a>
+            <a href="#"><img class="social-icon" src="images/instagram_icon.svg" alt="Instagram icon"></a>
+            <a href="#"><img class="social-icon" src="images/youtube_icon.svg" alt="YouTube icon"></a>
+            <a href="#"><img class="social-icon" src="images/pinterest_icon.svg" alt="Pinterest icon"></a>
         </div>
     </footer>
 </body>
