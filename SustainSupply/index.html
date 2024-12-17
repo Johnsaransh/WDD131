@@ -3,9 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SustainSupply</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <header>
+        <div class="logo-container">
+            <img src="sustainsupply.png" alt="SustainSupply Logo" class="logo">
+            <h1>SustainSupply</h1>
+        </div>
+        <p>Your trusted source for sustainable raw materials</p>
+    </header>
+    <nav>
+        <button onclick="navigateTo('home')">Home</button>
+        <button onclick="window.location.href='products.html'">Products</button>
+        <button onclick="navigateTo('contact')">Contact</button>
+    </nav>
+    <main>
+        <section id="home">
+            <h2>Welcome to SustainSupply</h2>
+            <p>We connect manufacturers worldwide with ethically sourced and high-quality raw materials from India. 
+                At SustainSupply, we believe in building a bridge between responsible suppliers and businesses seeking 
+                sustainable solutions. Our materials are carefully sourced to ensure both environmental and social responsibility. 
+                Whether you are looking for agricultural goods, industrial supplies, or natural resources, we offer a 
+                diverse range of products that meet international quality standards. By partnering with local Indian producers, 
+                we ensure fair trade practices while supporting communities and promoting sustainable development.
+                Trust SustainSupply to power your business with ethically sourced, reliable, and competitively priced raw materials. 
+                Together, let’s build a greener and more sustainable future. </p>
+            <p><a href="products.html" class="browse-link">Browse More Products</a></p>
+        </section>
+        <section id="products">
+            <h2>Our Products</h2>
+            <div class="products-grid">
+                <div class="product">
+                    <img src="cotton-bales.jpeg" alt="Cotton Bales">
+                    <h3>Cotton Bales</h3>
+                    <p>Price: $150/ton</p>
+                </div>
+                <div class="product">
+                    <img src="Ironore.jpg" alt="Iron Ore">
+                    <h3>Iron Ore</h3>
+                    <p>Price: $200/ton</p>
+                </div>
+                <div class="product">
+                    <img src="timberlogs.jpg" alt="Timber Logs">
+                    <h3>Timber Logs</h3>
+                    <p>Price: $100/ton</p>
+                </div>
+                <div class="product">
+                    <img src="wheat.jpg" alt="Wheat">
+                    <h3>Wheat</h3>
+                    <p>Price: $50/ton</p>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 SustainSupply. All rights reserved.</p>
+    </footer>
+    <script>
+        function navigateTo(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
