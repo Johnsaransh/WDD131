@@ -1,0 +1,109 @@
+/* Contact Section */
+.contact-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2em;
+    text-align: center;
+}
+
+.contact-section h2 {
+    margin-bottom: 1em;
+}
+
+.contact-section .intro-text {
+    margin-bottom: 2em;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Form Box */
+.form-box {
+    background-color: white;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column; /* Stack questions vertically */
+    gap: 1.5em;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    color: #333; /* Replace with var(--primary-color) if using CSS variables */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Ensure inputs take full width */
+    padding: 0.8em;
+    border: 1px solid #999; /* Replace with var(--primary-color) if defined */
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #66cc99; /* Replace with var(--accent1-color) if defined */
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    font-family: Arial, sans-serif; /* Replace with var(--font-body) if defined */
+}
+
+/* Submit Button */
+button {
+    background-color: #009688; /* Replace with var(--primary-color) if defined */
+    color: white;
+    padding: 0.8em 1.5em;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #00796b; /* Replace with var(--accent1-color) if defined */
+}
+
+/* Navigation Styles */
+nav {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+nav a {
+    margin: 0 1em;
+    text-decoration: none;
+    color: #009688;
+    font-weight: bold;
+}
+
+nav a.active {
+    text-decoration: underline;
+}
+
+nav a:hover {
+    color: #00796b;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #f4f4f4;
+    margin-top: 2em;
+    font-size: 0.9em;
+    color: #666;
+}

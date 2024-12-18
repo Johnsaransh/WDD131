@@ -1,0 +1,247 @@
+/* Importing fonts */
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Setting root variables */
+:root {
+  --primary-color: #D9984A;
+  --secondary-color: #BF843B;
+  --accent1-color: #593F1E;
+  --accent2-color: #0D0D0D;
+
+  --heading-font: "Jersey 25";
+  --paragraph-font: "Noto Serif Display", serif, sans-serif;
+
+  --headline-color-on-white: #D1AE80;
+  --headline-color-on-color: #D9984A;
+  --paragraph-color-on-white: #D1AE80;
+  --paragraph-color-on-color: #D9984A;
+  --paragraph-background-color: #FFFFFF;
+
+  --overlay-color: var(--headline-color-on-color);
+}
+
+body {
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color-on-white);
+  background-color: var(--accent2-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #BF9159;
+  color: var(--headline-color-on-color);
+  padding: 1em;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 100px;
+}
+
+nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  padding: 5px 10px;
+  font-size: 22px;
+  font-weight: normal;
+}
+
+nav a:hover {
+  color: black;
+  background-color: var(--headline-color-on-color);
+}
+
+main {
+  padding: 20px;
+}
+
+h2,
+h3 {
+  font-family: var(--heading-font);
+  color: var(--headline-color-on-color);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin-top: 20px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+/* Styles for images */
+.welcome-section img {
+  display: block;
+  margin: 20px auto;
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.image-overlay {
+  position: relative;
+  overflow: hidden;
+  width: calc(50% - 10px);
+  margin-bottom: 20px;
+}
+
+.image-overlay img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--overlay-color);
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+  transform: translateX(-100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.image-overlay.left-slide:hover .overlay,
+.image-overlay.right-slide:hover .overlay {
+  transform: translateX(0);
+}
+
+/* Footer styles */
+footer {
+  background-color: #BF9159;
+  color: var(--headline-color-on-color);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-left p {
+  margin: 0;
+}
+
+.footer-center {
+  text-align: center;
+  flex-grow: 1;
+}
+
+footer a {
+  color: black;
+  text-decoration: underline;
+  /* Always underlined */
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: white;
+}
+
+.copyright {
+  color: black;
+}
+
+.social {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+.social a {
+  margin: 0 10px;
+}
+
+.social img {
+  width: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    margin: 5px 0;
+  }
+
+  .social a {
+    display: block;
+    margin: 10px auto;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-left {
+    align-items: center;
+  }
+
+  .footer-center {
+    margin-top: 20px;
+  }
+}

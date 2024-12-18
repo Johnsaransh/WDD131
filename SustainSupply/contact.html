@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - SustainSupply</title>
+    <link rel="stylesheet" href="homestyles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="Sustainlogo.png" alt="SustainSupply Logo" class="logo">
+            <h1>SustainSupply</h1>
+        </div>
+        <p>Your trusted source for sustainable raw materials</p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html" class="active">Contact Us</a>
+    </nav>
+    <main>
+        <section class="contact-section">
+            <h2>Contact Us</h2>
+            <p class="intro-text">Have questions or feedback? Reach out to us using the form below or through our contact details.</p>
+            <div class="form-box">
+                <form action="submit_contact_form.php" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your message" required></textarea>
+                    
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 SustainSupply. All rights reserved.</p>
+    </footer>
+</body>
+</html>

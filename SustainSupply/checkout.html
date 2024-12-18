@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - SustainSupply</title>
+    <link rel="stylesheet" href="checkout-styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="Sustainlogo.png" alt="SustainSupply Logo" class="logo">
+            <h1>SustainSupply</h1>
+        </div>
+        <p>Your trusted source for sustainable raw materials</p>
+    </header>
+    <nav>
+        <div class="nav-links">
+            <a href="index.html" id="home-link">Home</a>
+            <a href="products.html" id="products-link">Products</a>
+            <a href="contact.html" id="contact-link">Contact Us</a>
+        </div>
+        <div class="cart-icon-container">
+            <a href="checkout.html" id="checkout-link">
+                <img src="shopping-cart.png" alt="Shopping Cart" class="cart-icon">
+            </a>
+        </div>
+    </nav>
+    <main>
+        <section id="checkout">
+            <h2>Your Cart</h2>
+            <div id="cart-container"></div>
+            <p id="total-price"></p>
+            <button id="clear-cart">Clear Cart</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 SustainSupply. All rights reserved.</p>
+    </footer>
+    <script>
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        function displayCart() {
+            const cartContainer = document.getElementById('cart-container');
+            const totalPriceContainer = document.getElementById('total-price');
+            cartContainer.innerHTML = '';
+
+            if (cart.length === 0) {
+                cartContainer.innerHTML = '<p>Your cart is empty.</p>';
+                totalPriceContainer.textContent = '';
+                return;
+            }
+
+            let total = 0;
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+
+                cartContainer.innerHTML += `
+                    <div class="product">
+                        <h3>${item.name}</h3>
+                        <p>Price: $${item.price}/ton</p>
+                        <p>Quantity: ${item.quantity}</p>
+                        <p>Total: $${itemTotal}</p>
+                    </div>
+                `;
+            });
+
+            totalPriceContainer.textContent = `Total Price: $${total}`;
+        }
+
+        function clearCart() {
+            localStorage.removeItem('cart');
+            cart = [];
+            displayCart();
+        }
+
+        document.getElementById('clear-cart').addEventListener('click', clearCart);
+
+        // Dynamically add 'active' class based on the current page
+        const currentPage = window.location.pathname.split('/').pop();
+        if (currentPage === 'index.html') {
+            document.getElementById('home-link').classList.add('active');
+        } else if (currentPage === 'products.html') {
+            document.getElementById('products-link').classList.add('active');
+        } else if (currentPage === 'contact.html') {
+            document.getElementById('contact-link').classList.add('active');
+        } else if (currentPage === 'checkout.html') {
+            document.getElementById('checkout-link').classList.add('active');
+        }
+
+        displayCart();
+    </script>
+</body>
+</html>

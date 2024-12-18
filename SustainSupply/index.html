@@ -4,20 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SustainSupply</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="homestyles.css">
 </head>
 <body>
     <header>
         <div class="logo-container">
-            <img src="sustainsupply.png" alt="SustainSupply Logo" class="logo">
+            <img src="Sustainlogo.png" alt="SustainSupply Logo" class="logo">
             <h1>SustainSupply</h1>
         </div>
         <p>Your trusted source for sustainable raw materials</p>
     </header>
     <nav>
-        <button onclick="navigateTo('home')">Home</button>
-        <button onclick="window.location.href='products.html'">Products</button>
-        <button onclick="navigateTo('contact')">Contact</button>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact Us</a> 
+        </div>
+        <div class="cart-icon-container">
+            <a href="checkout.html">
+                <img src="shopping-cart.png" alt="Shopping Cart" class="cart-icon">
+                
+            </a>
+        </div>
     </nav>
     <main>
         <section id="home">
@@ -29,7 +37,7 @@
                 diverse range of products that meet international quality standards. By partnering with local Indian producers, 
                 we ensure fair trade practices while supporting communities and promoting sustainable development.
                 Trust SustainSupply to power your business with ethically sourced, reliable, and competitively priced raw materials. 
-                Together, let’s build a greener and more sustainable future. </p>
+                Together, let’s build a greener and more sustainable future.</p>
             <p><a href="products.html" class="browse-link">Browse More Products</a></p>
         </section>
         <section id="products">
@@ -57,26 +65,9 @@
                 </div>
             </div>
         </section>
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message"></textarea>
-                <button type="submit">Submit</button>
-            </form>
-        </section>
     </main>
     <footer>
         <p>&copy; 2024 SustainSupply. All rights reserved.</p>
     </footer>
-    <script>
-        function navigateTo(sectionId) {
-            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
-        }
-    </script>
 </body>
 </html>

@@ -3,54 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Products - SustainSupply</title>
-    <link rel="stylesheet" href="products.css">
+    <title>Products - SustainSupply</title>
+    <link rel="stylesheet" href="products-styles.css">
 </head>
 <body>
     <header>
         <div class="logo-container">
-            <img src="sustainsupply.png" alt="SustainSupply Logo" class="logo">
-            <h1>Our Products</h1>
+            <img src="Sustainlogo.png" alt="SustainSupply Logo" class="logo">
+            <h1>SustainSupply</h1>
         </div>
+        <p>Your trusted source for sustainable raw materials</p>
     </header>
     <nav>
-        <button onclick="window.location.href='index.html'">Home</button>
-        <button onclick="window.location.href='products.html'">Products</button>
-        <button onclick="window.location.href='#contact'">Contact</button>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="products.html" class="active">Products</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="cart-icon-container">
+            <a href="checkout.html">
+                <img src="shopping-cart.png" alt="Shopping Cart" class="cart-icon">
+                <span id="cart-count" class="cart-count">0</span> 
+            </a>
+        </div>
     </nav>
     <main>
         <section id="products">
-            <h2>Explore Our Sustainable Products</h2>
+            <h2>Our Products</h2>
             <div class="products-grid">
+                
                 <div class="product">
                     <img src="cotton-bales.jpeg" alt="Cotton Bales">
                     <h3>Cotton Bales</h3>
+                    <p>Premium cotton bales for textile manufacturing.</p>
                     <p>Price: $150/ton</p>
+                    <button class="add-to-cart" data-name="Cotton Bales" data-price="150">Add to Cart</button>
                 </div>
                 <div class="product">
                     <img src="Ironore.jpg" alt="Iron Ore">
                     <h3>Iron Ore</h3>
+                    <p>High-quality iron ore for construction and manufacturing.</p>
                     <p>Price: $200/ton</p>
+                    <button class="add-to-cart" data-name="Iron Ore" data-price="200">Add to Cart</button>
                 </div>
                 <div class="product">
                     <img src="timberlogs.jpg" alt="Timber Logs">
                     <h3>Timber Logs</h3>
+                    <p>Sustainably harvested timber for woodworking and building.</p>
                     <p>Price: $100/ton</p>
+                    <button class="add-to-cart" data-name="Timber Logs" data-price="100">Add to Cart</button>
                 </div>
                 <div class="product">
                     <img src="wheat.jpg" alt="Wheat">
                     <h3>Wheat</h3>
+                    <p>Top-grade wheat for food production and exports.</p>
                     <p>Price: $50/ton</p>
+                    <button class="add-to-cart" data-name="Wheat" data-price="50">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="rice.jpg" alt="Rice">
+                    <h3>Rice</h3>
+                    <p>Premium rice sourced from India’s finest farms.</p>
+                    <p>Price: $70/ton</p>
+                    <button class="add-to-cart" data-name="Rice" data-price="70">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="spices.jpg" alt="Indian Spices">
+                    <h3>Indian Spices</h3>
+                    <p>Exotic and aromatic spices for culinary and industrial use.</p>
+                    <p>Price: $300/ton</p>
+                    <button class="add-to-cart" data-name="Indian Spices" data-price="300">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="coal.jpg" alt="Coal">
+                    <h3>Coal</h3>
+                    <p>High-efficiency coal for industrial applications.</p>
+                    <p>Price: $120/ton</p>
+                    <button class="add-to-cart" data-name="Coal" data-price="120">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="silk.jpg" alt="Silk">
+                    <h3>Silk</h3>
+                    <p>Luxurious silk for textiles and fashion.</p>
+                    <p>Price: $400/ton</p>
+                    <button class="add-to-cart" data-name="Silk" data-price="400">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="jute.jpg" alt="Jute Fibers">
+                    <h3>Jute Fibers</h3>
+                    <p>Eco-friendly jute fibers for packaging and textiles.</p>
+                    <p>Price: $90/ton</p>
+                    <button class="add-to-cart" data-name="Jute Fibers" data-price="90">Add to Cart</button>
                 </div>
                 <div class="product">
                     <img src="rubber.jpg" alt="Natural Rubber">
                     <h3>Natural Rubber</h3>
-                    <p>Price: $300/ton</p>
-                </div>
-                <div class="product">
-                    <img src="spices.jpg" alt="Spices">
-                    <h3>Indian Spices</h3>
+                    <p>High-quality natural rubber for industrial applications.</p>
                     <p>Price: $250/ton</p>
+                    <button class="add-to-cart" data-name="Natural Rubber" data-price="250">Add to Cart</button>
                 </div>
             </div>
         </section>
@@ -58,5 +108,6 @@
     <footer>
         <p>&copy; 2024 SustainSupply. All rights reserved.</p>
     </footer>
+    <script src="cart.js"></script>
 </body>
 </html>
